@@ -9,9 +9,9 @@ with live calculators and a 38-year annotated chart of the STI.
 
 <br>
 
-[![Open the live guide](https://img.shields.io/badge/▶_Open_the_live_guide-fang89.github.io%2Fsg--personal--finance-1d4ed8?style=for-the-badge)](https://fang89.github.io/sg-personal-finance/)
+[![Open the live guide](https://img.shields.io/badge/▶_Open_the_live_guide-fang89.github.io%2FSingapore--personal--finance-1d4ed8?style=for-the-badge)](https://fang89.github.io/Singapore-personal-finance/)
 
-**👉 [fang89.github.io/sg-personal-finance/](https://fang89.github.io/sg-personal-finance/)**
+**👉 [fang89.github.io/Singapore-personal-finance/](https://fang89.github.io/Singapore-personal-finance/)**
 
 <br>
 
@@ -23,7 +23,7 @@ with live calculators and a 38-year annotated chart of the STI.
 
 <br>
 
-<a href="https://fang89.github.io/sg-personal-finance/"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/hero-dark.png"><img src="docs/screenshots/hero-light.png" alt="The SG Finance guide: Set it up once, then stop optimising." width="860"></picture></a>
+<a href="https://fang89.github.io/Singapore-personal-finance/"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/hero-dark.png"><img src="docs/screenshots/hero-light.png" alt="The SG Finance guide: Set it up once, then stop optimising." width="860"></picture></a>
 
 </div>
 
@@ -53,7 +53,7 @@ December 1987. Market crises, Singapore-specific events, policy changes and ever
 earnings result are marked on the chart. Pan, zoom, and compare against the S&P 500,
 Nasdaq, Hang Seng, Nikkei, Bitcoin or gold.
 
-<p align="center"><a href="https://fang89.github.io/sg-personal-finance/#sti"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/sti-chart-dark.png"><img src="docs/screenshots/sti-chart-light.png" alt="STI dashboard: DBS share price over the past year with earnings beats and misses annotated" width="760"></picture></a></p>
+<p align="center"><a href="https://fang89.github.io/Singapore-personal-finance/#sti"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/sti-chart-dark.png"><img src="docs/screenshots/sti-chart-light.png" alt="STI dashboard: DBS share price over the past year with earnings beats and misses annotated" width="760"></picture></a></p>
 
 ## 🧮 Six calculators, built in
 
@@ -63,14 +63,14 @@ Type your own numbers; everything updates as you go. Nothing leaves your browser
 <tr>
 <td width="50%" valign="top">
 
-**[CPF top-up planner](https://fang89.github.io/sg-personal-finance/#cpf)**<br><sub>Projects your Special Account against your own cohort's Basic Retirement Sum, and the tax you save on the way.</sub>
+**[CPF top-up planner](https://fang89.github.io/Singapore-personal-finance/#cpf)**<br><sub>Projects your Special Account against your own cohort's Basic Retirement Sum, and the tax you save on the way.</sub>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/calc-cpf-dark.png"><img src="docs/screenshots/calc-cpf-light.png" alt="CPF top-up planner"></picture>
 
 </td>
 <td width="50%" valign="top">
 
-**[Tax estimator](https://fang89.github.io/sg-personal-finance/#tax)**<br><sub>YA2026 resident rates, CPF top-ups, SRS and reliefs: your bill, marginal and effective rate.</sub>
+**[Tax estimator](https://fang89.github.io/Singapore-personal-finance/#tax)**<br><sub>YA2026 resident rates, CPF top-ups, SRS and reliefs: your bill, marginal and effective rate.</sub>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/calc-tax-dark.png"><img src="docs/screenshots/calc-tax-light.png" alt="Tax estimator"></picture>
 
@@ -79,14 +79,14 @@ Type your own numbers; everything updates as you go. Nothing leaves your browser
 <tr>
 <td width="50%" valign="top">
 
-**[Payout estimator](https://fang89.github.io/sg-personal-finance/#payouts-estimator)**<br><sub>Cost-of-Living payment, GST Voucher, CDC vouchers, U-Save and Child LifeSG Credits for your household.</sub>
+**[Payout estimator](https://fang89.github.io/Singapore-personal-finance/#payouts-estimator)**<br><sub>Cost-of-Living payment, GST Voucher, CDC vouchers, U-Save and Child LifeSG Credits for your household.</sub>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/calc-payouts-dark.png"><img src="docs/screenshots/calc-payouts-light.png" alt="Payout estimator"></picture>
 
 </td>
 <td width="50%" valign="top">
 
-**[Childcare fee calculator](https://fang89.github.io/sg-personal-finance/#childcare-fee-calculator)**<br><sub>Basic and additional subsidies against your centre's fee, and what you actually pay.</sub>
+**[Childcare fee calculator](https://fang89.github.io/Singapore-personal-finance/#childcare-fee-calculator)**<br><sub>Basic and additional subsidies against your centre's fee, and what you actually pay.</sub>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/calc-childcare-dark.png"><img src="docs/screenshots/calc-childcare-light.png" alt="Childcare fee calculator"></picture>
 
@@ -95,14 +95,14 @@ Type your own numbers; everything updates as you go. Nothing leaves your browser
 <tr>
 <td width="50%" valign="top">
 
-**[Cashback card comparison](https://fang89.github.io/sg-personal-finance/#cards)**<br><sub>Nets each card's cashback against its annual fee at your monthly spend.</sub>
+**[Cashback card comparison](https://fang89.github.io/Singapore-personal-finance/#cards)**<br><sub>Nets each card's cashback against its annual fee at your monthly spend.</sub>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/calc-card-dark.png"><img src="docs/screenshots/calc-card-light.png" alt="Cashback card comparison"></picture>
 
 </td>
 <td width="50%" valign="top">
 
-**[Insurance cover check](https://fang89.github.io/sg-personal-finance/#insurance)**<br><sub>Your life and critical illness cover against the MAS rules of thumb.</sub>
+**[Insurance cover check](https://fang89.github.io/Singapore-personal-finance/#insurance)**<br><sub>Your life and critical illness cover against the MAS rules of thumb.</sub>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/calc-ins-dark.png"><img src="docs/screenshots/calc-ins-light.png" alt="Insurance cover check"></picture>
 
@@ -118,39 +118,39 @@ Type your own numbers; everything updates as you go. Nothing leaves your browser
 
 **1 · Finance basics**
 
-- [CPF](https://fang89.github.io/sg-personal-finance/#cpf)
-- [ETF investing](https://fang89.github.io/sg-personal-finance/#etf)
-- [Credit card](https://fang89.github.io/sg-personal-finance/#cards)
-- [Insurance](https://fang89.github.io/sg-personal-finance/#insurance)
-- [Tax](https://fang89.github.io/sg-personal-finance/#tax)
-- [Government payouts](https://fang89.github.io/sg-personal-finance/#payouts)
-- [Checklist](https://fang89.github.io/sg-personal-finance/#checklist)
+- [CPF](https://fang89.github.io/Singapore-personal-finance/#cpf)
+- [ETF investing](https://fang89.github.io/Singapore-personal-finance/#etf)
+- [Credit card](https://fang89.github.io/Singapore-personal-finance/#cards)
+- [Insurance](https://fang89.github.io/Singapore-personal-finance/#insurance)
+- [Tax](https://fang89.github.io/Singapore-personal-finance/#tax)
+- [Government payouts](https://fang89.github.io/Singapore-personal-finance/#payouts)
+- [Checklist](https://fang89.github.io/Singapore-personal-finance/#checklist)
 
 </td>
 <td valign="top" width="20%">
 
-**2 · [STI dashboard](https://fang89.github.io/sg-personal-finance/#sti)**
+**2 · [STI dashboard](https://fang89.github.io/Singapore-personal-finance/#sti)**
 
 38 years of the index and its 30 constituents, annotated.
 
 </td>
 <td valign="top" width="20%">
 
-**3 · [Hiring a helper](https://fang89.github.io/sg-personal-finance/#helper)**
+**3 · [Hiring a helper](https://fang89.github.io/Singapore-personal-finance/#helper)**
 
 Full monthly cost, the $60 concessionary levy, MOM rules and the step-by-step process.
 
 </td>
 <td valign="top" width="20%">
 
-**4 · [Baby bonus](https://fang89.github.io/sg-personal-finance/#baby)**
+**4 · [Baby bonus](https://fang89.github.io/Singapore-personal-finance/#baby)**
 
 Baby Bonus, CDA, MediSave grant, parental leave, tax rebates, and the April 2027 switch to the SG Child Support Package.
 
 </td>
 <td valign="top" width="20%">
 
-**5 · [Childcare](https://fang89.github.io/sg-personal-finance/#childcare)**
+**5 · [Childcare](https://fang89.github.io/Singapore-personal-finance/#childcare)**
 
 Preschool fees, subsidies, getting a place, and the 2027–2030 changes.
 

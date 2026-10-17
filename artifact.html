@@ -316,34 +316,6 @@ tr.is-best td:first-child { box-shadow: inset 3px 0 0 var(--accent); }
 }
 
 
-/* STI dashboard tokens (section 2) */
-:root {
-    --surface-1: #ffffff; --plane: #f4f7fc;
-    --ink-1: #0f1b33; --ink-2: #475569; --muted: #64748b;
-    --grid: #e2e8f2; --baseline: #cbd5e3; --border: rgba(15,27,51,0.10);
-    --series-1: #1d4ed8; --up: #006300; --down: #d03b3b;
-    --cat-crisis: #e34948; --cat-sg: #1baf7a; --cat-policy: #4a3aa7; --cat-milestone: #eda100; --cat-earnings: #eb6834;
-    --bm-gspc: #4a3aa7; --bm-ixic: #e87ba4; --bm-hsi: #e34948; --bm-n225: #1baf7a; --bm-btc: #eb6834; --bm-gold: #eda100;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --surface-1: #0f172a; --plane: #0a1020;
-    --ink-1: #e6ecf5; --ink-2: #c3cddc; --muted: #8e9bb0;
-    --grid: #1f2a40; --baseline: #2c3a55; --border: rgba(255,255,255,0.10);
-    --series-1: #60a5fa; --up: #0ca30c; --down: #e66767;
-    --cat-crisis: #e66767; --cat-sg: #199e70; --cat-policy: #9085e9; --cat-milestone: #c98500; --cat-earnings: #d95926;
-    --bm-gspc: #9085e9; --bm-ixic: #d55181; --bm-hsi: #e66767; --bm-n225: #199e70; --bm-btc: #d95926; --bm-gold: #c98500;
-  }
-}
-:root[data-theme="dark"] {
-    --surface-1: #0f172a; --plane: #0a1020;
-    --ink-1: #e6ecf5; --ink-2: #c3cddc; --muted: #8e9bb0;
-    --grid: #1f2a40; --baseline: #2c3a55; --border: rgba(255,255,255,0.10);
-    --series-1: #60a5fa; --up: #0ca30c; --down: #e66767;
-    --cat-crisis: #e66767; --cat-sg: #199e70; --cat-policy: #9085e9; --cat-milestone: #c98500; --cat-earnings: #d95926;
-    --bm-gspc: #9085e9; --bm-ixic: #d55181; --bm-hsi: #e66767; --bm-n225: #199e70; --bm-btc: #d95926; --bm-gold: #c98500;
-}
-
 /* ============================================================
    Blue-and-white accents
    ============================================================ */
@@ -360,160 +332,6 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
 .fig.accent { border-top: 3px solid var(--accent); }
 .body-col h2 { color: var(--ink); }
 .body-col h3 { color: var(--accent-ink); }
-.embed-cap { font-size: 14px; color: var(--ink-faint); max-width: var(--measure); }
-
-/* ============================================================
-   2 · STI dashboard (scoped to #sti-app; sizes by container)
-   ============================================================ */
-#sti-app {
-  container: sti / inline-size; margin-top: 24px; position: relative;
-  font-size: 14px; line-height: 1.45; color: var(--ink-1);
-}
-#sti-app .sti-loading { position: absolute; inset: 0 0 auto 0; padding: 48px 0; text-align: center; color: var(--ink-faint); font-size: 15px; }
-#sti-app.ready .sti-loading { display: none; }
-/* Before the data arrives, hold roughly the finished height so links to the
-   sections below do not land short when the dashboard fills in mid-scroll. */
-#sti-app:not(.ready) { min-height: 1425px; }
-@media (max-width: 760px) { #sti-app:not(.ready) { min-height: 1480px; } }
-@media (max-width: 640px) { #sti-app:not(.ready) { min-height: 1595px; } }
-@media (max-width: 520px) { #sti-app:not(.ready) { min-height: 1685px; } }
-@media (max-width: 420px) { #sti-app:not(.ready) { min-height: 1785px; } }
-@media (max-width: 340px) { #sti-app:not(.ready) { min-height: 1865px; } }
-#sti-app:not(.ready) > :not(.sti-loading) { visibility: hidden; }
-#sti-app th, #sti-app td { vertical-align: baseline; white-space: nowrap; }
-#sti-app thead th { text-transform: none; letter-spacing: 0; font-size: inherit; }
-#sti-app tbody tr:hover td { background: var(--surface-1); }
-#sti-app h2 { letter-spacing: 0; }
-#sti-app .sti-foot { margin-top: 22px; color: var(--muted); font-size: 12px; }
-  #sti-app .lg { width: 18px; height: 18px; border-radius: 4px; flex: none; object-fit: contain; background: #fff; padding: 2px; box-shadow: 0 0 0 1px var(--border); }
-  #sti-app .mono {
-    width: 18px; height: 18px; border-radius: 4px; flex: none;
-    background: color-mix(in srgb, var(--series-1) 16%, transparent); color: var(--series-1);
-    font-size: 8px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center;
-  }
-  #sti-app .theme-btn {
-    border: 1px solid var(--border); background: var(--surface-1); color: var(--ink-2);
-    border-radius: 8px; padding: 5px 10px; font: inherit; font-size: 12px; cursor: pointer;
-  }
-  #sti-app .theme-btn:hover { color: var(--ink-1); }
-
-  #sti-app .tiles { display: grid; grid-template-columns: minmax(220px, 1.5fr) repeat(5, minmax(128px, 1fr)); gap: 10px; margin: 14px 0; }
-  @container sti (max-width: 1100px) { #sti-app .tiles { grid-template-columns: repeat(3, 1fr); } #sti-app .tile.profile { grid-column: 1 / -1; } }
-  @container sti (max-width: 800px) { #sti-app .tiles { grid-template-columns: 1fr 1fr; } #sti-app .tile.profile { grid-column: 1 / -1; } }
-  #sti-app .tile.profile .ph { display: flex; align-items: center; gap: 7px; }
-  #sti-app .tile.profile .ph .lg, #sti-app .tile.profile .ph .mono { width: 22px; height: 22px; }
-  #sti-app .tile.profile .pn { font-weight: 650; font-size: 14px; }
-  #sti-app .tile.profile .pb { font-size: 11.5px; line-height: 1.35; color: var(--ink-2); margin-top: 4px; }
-  #sti-app .tile.profile .pm { font-size: 13px; font-weight: 650; margin-top: 5px; }
-  #sti-app .tile { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; }
-  #sti-app .tile .k { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
-  #sti-app .tile .v { font-size: 22px; font-weight: 650; margin-top: 2px; }
-  #sti-app .tile .s { font-size: 12px; color: var(--ink-2); margin-top: 1px; }
-  #sti-app .tile .vr { display: flex; align-items: baseline; gap: 7px; margin-top: 3px; }
-  #sti-app .tile .vr .vl { font-size: 11px; color: var(--muted); min-width: 24px; }
-  #sti-app .tile .vr .vv { font-size: 17px; font-weight: 650; }
-  #sti-app .pos { color: var(--up); } #sti-app .neg { color: var(--down); }
-
-  #sti-app .sti-controls { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin: 10px 0 12px; }
-  #sti-app .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: var(--surface-1); }
-  #sti-app .seg button {
-    border: 0; background: none; color: var(--ink-2); padding: 6px 11px;
-    font: inherit; font-size: 12.5px; cursor: pointer; border-right: 1px solid var(--border);
-  }
-  #sti-app .seg button:last-child { border-right: 0; }
-  #sti-app .seg button:hover { color: var(--ink-1); }
-  #sti-app .seg button[aria-pressed="true"] { background: var(--series-1); color: #fff; }
-  #sti-app .seg.dim { opacity: 0.45; pointer-events: none; }
-  #sti-app .chips { display: inline-flex; gap: 6px; flex-wrap: wrap; }
-  #sti-app .chip {
-    display: inline-flex; align-items: center; gap: 6px; cursor: pointer;
-    border: 1px solid var(--border); background: var(--surface-1); color: var(--ink-2);
-    border-radius: 999px; padding: 5px 11px; font: inherit; font-size: 12.5px;
-  }
-  #sti-app .chip .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--c); box-shadow: 0 0 0 1px var(--border); }
-  #sti-app .chip[aria-pressed="false"] { opacity: 0.45; }
-  #sti-app .chip[aria-pressed="false"] .dot { background: var(--muted); }
-  #sti-app .hint { color: var(--muted); font-size: 12px; }
-
-  #sti-app .sti-layout { display: grid; grid-template-columns: 232px 1fr; gap: 14px; align-items: start; }
-  @container sti (max-width: 860px) { #sti-app .sti-layout { grid-template-columns: 1fr; } }
-
-  #sti-app .sti-side { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
-  #sti-app .sti-side .grp { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); padding: 10px 12px 4px; }
-  #sti-app .sti-side button.tk {
-    display: flex; width: 100%; align-items: center; gap: 8px; border: 0; background: none;
-    padding: 6px 12px; font: inherit; font-size: 13px; color: var(--ink-1); cursor: pointer; text-align: left;
-  }
-  #sti-app .sti-side button.tk:hover { background: color-mix(in srgb, var(--series-1) 8%, transparent); }
-  #sti-app .sti-side button.tk[aria-current="true"] { background: color-mix(in srgb, var(--series-1) 14%, transparent); box-shadow: inset 3px 0 0 var(--series-1); }
-  #sti-app .tk .nm { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  #sti-app .tk .pc { font-size: 12px; font-variant-numeric: tabular-nums; }
-  @container sti (max-width: 860px) {
-    #sti-app .sti-side { display: flex; overflow-x: auto; -webkit-overflow-scrolling: touch; padding: 6px; gap: 4px; }
-    #sti-app .sti-side .grp { display: none; }
-    #sti-app .sti-side button.tk { flex: none; width: auto; border: 1px solid var(--border); border-radius: 999px; padding: 6px 10px; }
-    #sti-app .sti-side button.tk[aria-current="true"] { box-shadow: none; border-color: var(--series-1); }
-    #sti-app .tk .nm { max-width: 110px; }
-    #sti-app .sti-controls .hint { display: none; }
-  }
-  @container sti (max-width: 600px) {
-    #sti-app .tile .v { font-size: 19px; }
-    #sti-app .chart-wrap { height: 320px; }
-    #sti-app .ov-wrap { height: 44px; }
-  }
-
-  #sti-app .card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 12px 12px 8px; }
-  #sti-app .chart-head { display: flex; align-items: center; gap: 8px; padding: 0 4px 4px; }
-  #sti-app .chart-head .nm { font-weight: 650; font-size: 15px; }
-  #sti-app .chart-head .code { color: var(--muted); font-size: 12px; }
-  #sti-app .chart-wrap { position: relative; height: 430px; touch-action: pan-y; cursor: crosshair; }
-  #sti-app .chart-wrap canvas, #sti-app .ov-wrap canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
-  #sti-app .ov-wrap { position: relative; height: 56px; margin-top: 8px; touch-action: pan-y; cursor: grab; }
-  #sti-app .tooltip {
-    position: absolute; pointer-events: none; display: none; z-index: 3; min-width: 150px; max-width: 260px;
-    background: var(--surface-1); border: 1px solid var(--border); border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.18); padding: 8px 10px; font-size: 12px;
-  }
-  #sti-app .tooltip .d { color: var(--ink-2); }
-  #sti-app .tooltip .p { font-size: 16px; font-weight: 650; color: var(--ink-1); }
-  #sti-app .tooltip .r { color: var(--ink-2); margin-top: 1px; }
-  #sti-app .tooltip .ev { display: flex; gap: 6px; align-items: baseline; margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--grid); }
-  #sti-app .tooltip .ev .key { width: 14px; height: 0; border-top: 3px solid var(--c); transform: translateY(-3px); flex: none; }
-
-  #sti-app .ev-detail {
-    display: none; margin-top: 10px; border: 1px solid var(--border); border-left: 4px solid var(--c);
-    background: color-mix(in srgb, var(--c) 6%, var(--surface-1));
-    border-radius: 8px; padding: 10px 12px; position: relative;
-  }
-  #sti-app .ev-detail .dt { font-size: 12px; color: var(--ink-2); }
-  #sti-app .ev-detail .tt { font-weight: 650; margin: 1px 0 3px; }
-  #sti-app .ev-detail .bb { font-size: 13px; color: var(--ink-2); }
-  #sti-app .ev-detail .x { position: absolute; top: 6px; right: 8px; border: 0; background: none; color: var(--muted); font-size: 15px; cursor: pointer; }
-
-  #sti-app .ev-panel { margin-top: 14px; }
-  #sti-app .ev-panel h2 { font-size: 14px; margin: 0 0 8px; }
-  #sti-app .ev-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 8px; max-height: 330px; overflow-y: auto; padding-right: 2px; }
-  #sti-app .ev-card {
-    display: block; text-align: left; font: inherit; cursor: pointer;
-    background: var(--surface-1); border: 1px solid var(--border); border-left: 4px solid var(--c);
-    border-radius: 8px; padding: 8px 10px; color: var(--ink-1);
-  }
-  #sti-app .ev-card:hover { border-color: var(--c); }
-  #sti-app .ev-card.dim { opacity: 0.5; }
-  #sti-app .ev-card.sel { box-shadow: 0 0 0 2px var(--c); }
-  #sti-app .ev-card .dt { font-size: 11px; color: var(--muted); }
-  #sti-app .ev-card .tt { font-weight: 600; font-size: 13px; margin: 1px 0 2px; }
-  #sti-app .ev-card .bb { font-size: 12px; color: var(--ink-2); }
-
-  #sti-app details.tbl { margin-top: 14px; }
-  #sti-app details.tbl summary { cursor: pointer; color: var(--ink-2); font-size: 13px; }
-  #sti-app details.tbl table { border-collapse: collapse; margin-top: 8px; font-size: 12.5px; }
-  #sti-app details.tbl th, #sti-app details.tbl td { border: 1px solid var(--grid); padding: 4px 10px; text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-1); background: var(--surface-1); }
-  #sti-app details.tbl th:first-child, #sti-app details.tbl td:first-child { text-align: left; }
-  #sti-app details.tbl th { color: var(--ink-2) !important; font-weight: 600; }
-  #sti-app details.tbl td.pos { color: var(--up); }
-  #sti-app details.tbl td.neg { color: var(--down); }
-
 
 /* ============================================================
    Top navigation: four groups, dropdowns on wide screens,
@@ -552,20 +370,6 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
 .dd-panel a.foot { margin-top: 4px; border-top: 1px solid var(--rule); border-radius: 0 0 8px 8px; padding-top: 11px; }
 .menu-toggle { display: none; }
 
-/* STI dashboard: the one direct link, styled as a button */
-.sti-btn {
-  display: inline-flex; align-items: center; gap: 7px; margin: 0 4px;
-  font: 600 14px var(--f-text); color: #fff; text-decoration: none; white-space: nowrap;
-  background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 6px 12px 6px 7px;
-  box-shadow: 0 1px 2px rgba(15,27,51,.12); transition: background .15s ease, box-shadow .15s ease;
-}
-.sti-btn svg { width: 15px; height: 15px; }
-.sti-btn .num { background: rgba(255,255,255,.22); border-color: transparent; color: inherit; }
-.sti-btn:hover { background: var(--accent-ink); border-color: var(--accent-ink); color: #fff; box-shadow: 0 3px 10px -4px rgba(29,78,216,.6); }
-.sti-btn.is-on { box-shadow: 0 0 0 3px var(--accent-line); }
-:root[data-theme="dark"] .sti-btn, :root[data-theme="dark"] .sti-btn:hover { color: #0A1020; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .sti-btn, :root:not([data-theme="light"]) .sti-btn:hover { color: #0A1020; } }
-
 /* contents grid, grouped like the menu */
 .toc-group + .toc-group { margin-top: 28px; }
 .toc .gnum { display: inline-grid; place-items: center; width: 18px; height: 18px; margin-right: 8px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 11px; letter-spacing: 0; }
@@ -585,7 +389,6 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
   .dd-btn { width: 100%; justify-content: flex-start; padding: 11px 8px; font-size: 15.5px; font-weight: 600; color: var(--ink); }
   .dd-btn .chev { margin-left: auto; }
   .dd-panel { position: static; min-width: 0; max-width: none; box-shadow: none; border: 0; border-left: 2px solid var(--rule); border-radius: 0; margin: 0 0 6px 17px; padding: 0 0 0 8px; }
-  .sti-btn { margin: 6px 0; justify-content: flex-start; padding: 9px 12px 9px 8px; font-size: 15.5px; }
 }
 @media (min-width: 1001px) { .mainnav { margin-left: 16px; } .mainnav + #themeBtn { margin-left: auto; } }
 @media (max-width: 350px) { .brand .txt { display: none; } }
@@ -609,9 +412,8 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
             <a class="foot" href="#checklist" data-sec="checklist"><b>Checklist</b><span>Everything in the guide, in order</span></a>
           </div>
         </li>
-        <li><a class="sti-btn" href="#sti" data-sec="sti"><span class="num">2</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 13.5h13M2.5 11l3.5-4 3 2.5 4.5-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>STI dashboard</a></li>
         <li class="dd" data-secs="helper">
-          <button class="dd-btn" type="button" aria-expanded="false"><span class="num">3</span>Hiring a helper <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="dd-btn" type="button" aria-expanded="false"><span class="num">2</span>Hiring a helper <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           <div class="dd-panel">
             <a href="#helper" data-sec="helper"><b>Overview</b></a>
             <a href="#helper-what-it-costs" data-sec="helper"><b>What it costs</b></a>
@@ -622,7 +424,7 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
           </div>
         </li>
         <li class="dd" data-secs="baby">
-          <button class="dd-btn" type="button" aria-expanded="false"><span class="num">4</span>Baby bonus <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="dd-btn" type="button" aria-expanded="false"><span class="num">3</span>Baby bonus <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           <div class="dd-panel dd-right">
             <a href="#baby" data-sec="baby"><b>Overview</b></a>
             <a href="#baby-the-money-at-a-glance" data-sec="baby"><b>The money, at a glance</b></a>
@@ -634,7 +436,7 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
           </div>
         </li>
         <li class="dd" data-secs="childcare">
-          <button class="dd-btn" type="button" aria-expanded="false"><span class="num">5</span>Childcare <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="dd-btn" type="button" aria-expanded="false"><span class="num">4</span>Childcare <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           <div class="dd-panel dd-right">
             <a href="#childcare" data-sec="childcare"><b>Overview</b></a>
             <a href="#childcare-the-stages-and-what-they-cost" data-sec="childcare"><b>The stages, and what they cost</b></a>
@@ -724,26 +526,20 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
     <div class="toc-group">
       <span class="mono-label">The rest of the guide</span>
       <div class="toc-grid">
-      <a class="toc-card" href="#sti">
-        <span class="n">2 · STI dashboard</span>
-        <span class="h">38 years of the STI</span>
-        <span class="d">The index and its 30 members since 1987, annotated with crises, policy changes and earnings.</span>
-        <span class="x">interactive chart</span>
-      </a>
       <a class="toc-card" href="#helper">
-        <span class="n">3 · Hiring a helper</span>
+        <span class="n">2 · Hiring a helper</span>
         <span class="h">Hire a helper properly</span>
         <span class="d">The real monthly cost, the $60 levy concession, MOM's rules and the step-by-step process.</span>
         <span class="x">~$1,000–1,250/mo · levy $300 → $60</span>
       </a>
       <a class="toc-card" href="#baby">
-        <span class="n">4 · Baby bonus</span>
+        <span class="n">3 · Baby bonus</span>
         <span class="h">Claim every baby benefit</span>
         <span class="d">Baby Bonus, CDA matching, MediSave grant, 30 weeks of paid leave, tax rebates — and the April 2027 switch.</span>
         <span class="x">$25,000+ for a first child · what to file, when</span>
       </a>
       <a class="toc-card" href="#childcare">
-        <span class="n">5 · Childcare</span>
+        <span class="n">4 · Childcare</span>
         <span class="h">Childcare and preschool costs</span>
         <span class="d">Infant care, childcare and kindergarten fees after subsidies, operator by operator, and the cuts coming from 2028.</span>
         <span class="x">$365–746/mo at an Anchor Operator · fee calculator</span>
@@ -1212,7 +1008,7 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
         <div class="note">
           <span class="tag">See the STI for yourself</span>
           <p>
-            The <a href="#sti">STI dashboard</a> charts the index and all 30 members since 1987,
+            The <a href="https://fang89.github.io/Singapore-STI/">Singapore STI dashboard</a> charts the index and all 30 members since 1987,
             annotated with every crisis, policy change and earnings result that moved them.
           </p>
         </div>
@@ -1957,89 +1753,11 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
     </div>
   </section>
 
-  <!-- ==================== 2 · STI dashboard ==================== -->
-  <section class="section" id="sti">
-    <div class="section-grid">
-      <div class="rail">
-        <span class="role">2 — STI dashboard</span>
-        <span class="rail-note">The Straits Times Index and its 30 members since 1987, with the crises, policy changes and earnings that moved them.</span>
-      </div>
-      <div class="body-col">
-        <h2>Thirty-eight years of Singapore's market, annotated</h2>
-        <p class="lede">
-          The Straits Times Index and every one of its 30 constituents, with daily prices
-          back to December 1987 for the index. Market crises, Singapore-specific events,
-          policy changes and each company's earnings results are marked on the chart. Use it
-          for context, not for picking stocks; <a href="#etf-singapore-stocks-and-the-sti">ETF investing</a>
-          explains why the index fund beats choosing banks.
-        </p>
-        <p class="embed-cap">
-          Pick a ticker, choose a range, and drag or scroll on the chart to pan and zoom.
-          Click an event card for the story behind it. Compare against the S&amp;P 500,
-          Nasdaq, Hang Seng, Nikkei, Bitcoin or gold with the buttons above the chart.
-        </p>
-      </div>
-    </div>
-
-    <div id="sti-app" aria-label="Straits Times Index dashboard">
-      <p class="sti-loading" id="sti-loading">Loading 38 years of prices…</p>
-  <div class="tiles" id="sti-tiles"></div>
-
-  <div class="sti-controls">
-    <div class="seg" id="sti-ranges" role="group" aria-label="Date range"></div>
-    <div class="seg" id="sti-scaleSeg" role="group" aria-label="Scale">
-      <button type="button" data-scale="lin" aria-pressed="true">Linear</button>
-      <button type="button" data-scale="log" aria-pressed="false">Log</button>
-    </div>
-    <div class="chips" id="sti-catChips" role="group" aria-label="Event categories"></div>
-    <span class="hint" id="sti-benchHint">compare</span>
-    <div class="chips" id="sti-benchChips" role="group" aria-label="Compare against benchmarks"></div>
-    <span class="hint">scroll to zoom · drag to pan · click a flag or card for the story</span>
-  </div>
-
-  <div class="sti-layout">
-    <nav class="sti-side" id="sti-sidebar" aria-label="Tickers"></nav>
-
-    <div>
-      <div class="card">
-        <div class="chart-head">
-          <img class="lg" id="sti-chartLogo" alt="" style="display:none"><span class="nm" id="sti-chartName"></span><span class="code" id="sti-chartCode"></span>
-          <span class="spacer" style="flex:1"></span>
-          <span class="hint" id="sti-rangeLabel"></span>
-        </div>
-        <div class="chart-wrap" id="sti-chartWrap">
-          <canvas id="sti-base"></canvas><canvas id="sti-overlay"></canvas>
-          <div class="tooltip" id="sti-tooltip"></div>
-        </div>
-        <div class="ov-wrap" id="sti-ovWrap"><canvas id="sti-ovCanvas"></canvas></div>
-      </div>
-
-      <div class="ev-detail" id="sti-evDetail">
-        <button class="x" type="button" aria-label="Clear selection" id="sti-evClose">✕</button>
-        <div class="dt"></div><div class="tt"></div><div class="bb"></div>
-      </div>
-
-      <div class="ev-panel">
-        <h2>Key events <span class="hint" id="sti-evCount"></span></h2>
-        <div class="ev-list" id="sti-evList"></div>
-      </div>
-
-      <details class="tbl" id="sti-tableView">
-        <summary>Data table (year-end closes)</summary>
-        <div style="overflow-x:auto"><table id="sti-yearTable"></table></div>
-      </details>
-      <p class="sti-foot">Prices: Yahoo Finance daily closes (unadjusted), <span id="sti-genDate"></span> ·
-        Events curated from public reporting · Not investment advice.</p>
-    </div>
-  </div>
-    </div>
-  </section>
-
-  <!-- ==================== 3 · Helper ==================== -->
+  <!-- ==================== 2 · Helper ==================== -->
   <section class="section" id="helper">
     <div class="section-grid">
       <div class="rail">
-        <span class="role">3 — Hiring a helper</span>
+        <span class="role">2 — Hiring a helper</span>
         <span class="rail-note">A live-in domestic helper: what it really costs, what MOM requires, and the levy discount most families qualify for.</span>
         <nav class="rail-toc" aria-label="In this section">
           <a href="#helper-what-it-costs">What it costs</a>
@@ -2192,11 +1910,11 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
     </div>
   </section>
 
-  <!-- ==================== 4 · Baby ==================== -->
+  <!-- ==================== 3 · Baby ==================== -->
   <section class="section" id="baby">
     <div class="section-grid">
       <div class="rail">
-        <span class="role">4 — Baby bonus</span>
+        <span class="role">3 — Baby bonus</span>
         <span class="rail-note">Every cash grant, account top-up, leave week and tax rebate for a Singapore Citizen baby, and the few forms that unlock them.</span>
         <nav class="rail-toc" aria-label="In this section">
           <a href="#baby-the-money-at-a-glance">The money, at a glance</a>
@@ -2378,11 +2096,11 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
     </div>
   </section>
 
-  <!-- ==================== 5 · Childcare ==================== -->
+  <!-- ==================== 4 · Childcare ==================== -->
   <section class="section" id="childcare">
     <div class="section-grid">
       <div class="rail">
-        <span class="role">5 — Childcare</span>
+        <span class="role">4 — Childcare</span>
         <span class="rail-note">What infant care, childcare and kindergarten actually cost after subsidies, from 2 months to 6 years, and what changes from 2027.</span>
         <nav class="rail-toc" aria-label="In this section">
           <a href="#childcare-the-stages-and-what-they-cost">The stages, and what they cost</a>
@@ -2829,7 +2547,7 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
   /* ---------- one section per page: the hash picks which one is shown ---------- */
   var PAGES = [
     ["cpf", "CPF"], ["etf", "ETF investing"], ["cards", "Credit card"], ["insurance", "Insurance"],
-    ["tax", "Tax"], ["payouts", "Government payouts"], ["sti", "STI dashboard"], ["helper", "Hiring a helper"], ["baby", "Baby bonus"],
+    ["tax", "Tax"], ["payouts", "Government payouts"], ["helper", "Hiring a helper"], ["baby", "Baby bonus"],
     ["childcare", "Childcare"],
     ["checklist", "Checklist"]
   ];
@@ -2855,6 +2573,9 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
     sec.appendChild(nav);
   });
 
+  // The STI dashboard moved to its own site; send old #sti links there.
+  if (location.hash === "#sti") location.replace("https://fang89.github.io/Singapore-STI/");
+
   function show() {
     var id = decodeURIComponent(location.hash.slice(1));
     var target = id && id !== "top" ? document.getElementById(id) : null;
@@ -2871,7 +2592,6 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
       groups.forEach(function (g) { g.classList.toggle("is-on", g.getAttribute("data-secs").split(" ").indexOf(view) > -1); });
       var name = PAGES.filter(function (p) { return p[0] === view; })[0];
       document.title = name ? name[1] + " · " + BASE_TITLE : BASE_TITLE;
-      if (view === "sti") window.dispatchEvent(new Event("resize"));   // chart measured while hidden
       current = view;
       window.scrollTo({ top: 0, behavior: "instant" });
     }
@@ -2898,31 +2618,6 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
     });
   }
   stackTables();
-
-  /* ---------- 2 · STI dashboard: load its data only when it comes near ---------- */
-  var stiApp = document.getElementById("sti-app");
-  if (stiApp) {
-    var stiStarted = false;
-    var loadSti = function () {
-      if (stiStarted) return;
-      stiStarted = true;
-      ["data.js", "benchmarks.js", "logos.js", "earnings.js", "profiles.js", "app.js"].forEach(function (f) {
-        var s = document.createElement("script");
-        s.src = "sti/" + f;
-        s.async = false;   // download in parallel, run in order
-        s.onerror = function () { document.getElementById("sti-loading").textContent = "Could not load the market data."; };
-        document.body.appendChild(s);
-      });
-    };
-    if ("IntersectionObserver" in window) {
-      var stiIo = new IntersectionObserver(function (entries) {
-        if (entries.some(function (e) { return e.isIntersecting; })) { stiIo.disconnect(); loadSti(); }
-      }, { rootMargin: "1500px 0px" });
-      stiIo.observe(stiApp);
-    } else {
-      loadSti();
-    }
-  }
 
   /* ---------- formatting ---------- */
   var sgd = new Intl.NumberFormat("en-SG", { style: "currency", currency: "SGD", maximumFractionDigits: 0 });
@@ -3105,7 +2800,7 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
   [pAi1, pAi2, pKids].forEach(function (el) { el.addEventListener("input", runPay); });
   runPay();
 
-  /* ---------- 5 · Childcare fee calculator ---------- */
+  /* ---------- 4 · Childcare fee calculator ---------- */
   // Fee caps from 1 Jan 2026 with 9% GST; additional subsidy bands [income up to, max AS, min co-pay].
   var CC_FEES = { ic: { aop: 1346.15, pop: 1406.10, pvt: 2200 }, cc: { aop: 664.90, pop: 708.50, pvt: 1600 } };
   var CC_BS = { ic: 600, cc: 300 };

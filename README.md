@@ -5,7 +5,7 @@
 ### Set it up once, then stop optimising.
 
 A free, no-nonsense money guide for Singapore households,<br>
-with live calculators and a 38-year annotated chart of the STI.
+with live calculators for your own numbers.
 
 <br>
 
@@ -46,14 +46,8 @@ household, nearly all of the value sits in a handful of decisions you make **onc
 When the family grows, the guide covers hiring a helper, every baby benefit, and what
 preschool really costs.
 
-## 📈 The STI dashboard
-
-The Straits Times Index and all 30 of its constituents, with daily prices back to
-December 1987. Market crises, Singapore-specific events, policy changes and every
-earnings result are marked on the chart. Pan, zoom, and compare against the S&P 500,
-Nasdaq, Hang Seng, Nikkei, Bitcoin or gold.
-
-<p align="center"><a href="https://fang89.github.io/Singapore-personal-finance/#sti"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/sti-chart-dark.png"><img src="docs/screenshots/sti-chart-light.png" alt="STI dashboard: DBS share price over the past year with earnings beats and misses annotated" width="760"></picture></a></p>
+The annotated STI chart that used to live here is now its own project:
+**[Singapore STI](https://github.com/fang89/Singapore-STI)**.
 
 ## 🧮 Six calculators, built in
 
@@ -114,7 +108,7 @@ Type your own numbers; everything updates as you go. Nothing leaves your browser
 
 <table>
 <tr>
-<td valign="top" width="20%">
+<td valign="top" width="25%">
 
 **1 · Finance basics**
 
@@ -127,30 +121,23 @@ Type your own numbers; everything updates as you go. Nothing leaves your browser
 - [Checklist](https://fang89.github.io/Singapore-personal-finance/#checklist)
 
 </td>
-<td valign="top" width="20%">
+<td valign="top" width="25%">
 
-**2 · [STI dashboard](https://fang89.github.io/Singapore-personal-finance/#sti)**
-
-38 years of the index and its 30 constituents, annotated.
-
-</td>
-<td valign="top" width="20%">
-
-**3 · [Hiring a helper](https://fang89.github.io/Singapore-personal-finance/#helper)**
+**2 · [Hiring a helper](https://fang89.github.io/Singapore-personal-finance/#helper)**
 
 Full monthly cost, the $60 concessionary levy, MOM rules and the step-by-step process.
 
 </td>
-<td valign="top" width="20%">
+<td valign="top" width="25%">
 
-**4 · [Baby bonus](https://fang89.github.io/Singapore-personal-finance/#baby)**
+**3 · [Baby bonus](https://fang89.github.io/Singapore-personal-finance/#baby)**
 
 Baby Bonus, CDA, MediSave grant, parental leave, tax rebates, and the April 2027 switch to the SG Child Support Package.
 
 </td>
-<td valign="top" width="20%">
+<td valign="top" width="25%">
 
-**5 · [Childcare](https://fang89.github.io/Singapore-personal-finance/#childcare)**
+**4 · [Childcare](https://fang89.github.io/Singapore-personal-finance/#childcare)**
 
 Preschool fees, subsidies, getting a place, and the 2027–2030 changes.
 
@@ -171,10 +158,7 @@ Preschool fees, subsidies, getting a place, and the 2027–2030 changes.
 
 ```
 index.html                 the entire guide: no build step, no dependencies
-sti/                       the STI dashboard's code and data
-  app.js                   chart code; its markup and styles live in index.html under #sti-app
-  data.js, earnings.js …   generated data; refresh with the fetch_*.py scripts (see sti/README.md)
-  index.html               redirect from the old /sti/ address to ../#sti
+sti/index.html             redirect from the old /sti/ address to the Singapore STI site
 artifact.html              generated preview body (Claude Artifact / embed use)
 tools/build_artifact.py    regenerates artifact.html from index.html
 docs/screenshots/          images used in this README
@@ -183,8 +167,7 @@ docs/screenshots/          images used in this README
 
 `index.html` is the single source of truth. Its styles, scripts and content are inline,
 so it works from a local `file://` open, any static host, or GitHub Pages with no
-toolchain. The STI dashboard loads its ~3 MB of data from `sti/` only when the reader
-opens it.
+toolchain.
 
 ### Running it locally
 
@@ -227,7 +210,6 @@ move, and when:
 | Card rates and annual fees | frequently, with little notice | each issuer |
 | MDW levy, bond, insurance rules | occasionally | [MOM](https://www.mom.gov.sg/passes-and-permits/work-permit-for-foreign-domestic-worker) |
 | Baby Bonus / CDA / SG Child Support Package | Budget and National Day Rally; scheme replaced 1 Apr 2027 | [Made for Families](https://www.madeforfamilies.gov.sg/ndr-2026-supporting-families) |
-| STI dashboard prices and earnings | whenever refreshed (`sti/fetch_*.py`) | Yahoo Finance |
 | MediShield Life, CareShield Life, IP rider rules | MOH reviews, roughly every 5 years | [MOH](https://www.moh.gov.sg/managing-expenses/schemes-and-subsidies/medishield-life/) |
 | SRS cap, retirement age | occasionally | [IRAS](https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-reliefs-rebates-and-deductions/tax-reliefs/supplementary-retirement-scheme-(srs)-relief) |
 | Parental leave | Budget and NDR | [Made for Families](https://www.madeforfamilies.gov.sg/parental-leave-and-benefits/shared-parental-leave) |

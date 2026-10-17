@@ -1,95 +1,220 @@
-# SG Finance
+<div align="center">
 
-A single-page personal finance guide for Singapore households in four parts, navigated
-from dropdowns in the top bar:
+# 🇸🇬 SG Finance
 
-1. **Finance basics**
-   1. **CPF** — funding MediSave and the Special Account toward the Basic Retirement Sum,
-      and what the cash top-up tax relief is worth at each marginal rate.
-   2. **ETF investing** — Ireland-domiciled accumulating ETFs (IWDA / EIMI / VWRA) through
-      Interactive Brokers, why domicile beats index choice, and where Singapore stocks fit.
-   3. **Credit card** — one uncapped flat-rate cashback card, with the fee-versus-rate maths.
-   4. **Insurance** — what MediShield Life, CareShield Life, DPS and HPS already cover,
-      Integrated Shield Plans and the April 2026 rider rules, term life and critical illness
-      cover, and insuring a newborn.
-   5. **Tax** — 2026 resident rates, every relief a family can claim, SRS, which spouse
-      should claim what, and the tax-year calendar.
-   6. **Checklist** — the whole page as things to do.
-2. **STI dashboard** — the Straits Times Index and its 30 constituents since 1987 on an
-   interactive chart, annotated with market events and every earnings result.
-3. **Hiring a helper** — full cost, the $60 concessionary levy, MOM requirements and the
-   step-by-step process.
-4. **Baby bonus** — every government benefit for a Singapore Citizen newborn (Baby Bonus,
-   CDA, MediSave grant, parental leave, tax rebates) and the April 2027 switch to the
-   SG Child Support Package.
+### Set it up once, then stop optimising.
 
-Four interactive calculators are built in: a CPF top-up planner that projects your Special
-Account against your own cohort's Basic Retirement Sum, a card comparison that nets
-cashback against the annual fee, an insurance cover check against the MAS rules of thumb,
-and a tax estimator.
+A free, no-nonsense money guide for Singapore households,<br>
+with live calculators and a 38-year annotated chart of the STI.
 
-**This is not financial advice.** Figures were checked against primary sources on
-16 August 2026 (CPF, ETFs, cards) and 4 October 2026 (helper, baby, insurance, tax). See the disclaimer and source list in the page footer.
+<br>
 
-## Structure
+[![Open the live guide](https://img.shields.io/badge/▶_Open_the_live_guide-fang89.github.io%2Fsg--personal--finance-1d4ed8?style=for-the-badge)](https://fang89.github.io/sg-personal-finance/)
+
+**👉 [fang89.github.io/sg-personal-finance/](https://fang89.github.io/sg-personal-finance/)**
+
+<br>
+
+![Updated](https://img.shields.io/badge/figures_checked-4_Oct_2026-0f766e)
+![Tax year](https://img.shields.io/badge/tax_year-YA2026-0f766e)
+![No build step](https://img.shields.io/badge/build_step-none-475569)
+![Dependencies](https://img.shields.io/badge/dependencies-0-475569)
+![Licence](https://img.shields.io/badge/licence-MIT-475569)
+
+<br>
+
+<a href="https://fang89.github.io/sg-personal-finance/"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/hero-dark.png"><img src="docs/screenshots/hero-light.png" alt="The SG Finance guide: Set it up once, then stop optimising." width="860"></picture></a>
+
+</div>
+
+---
+
+## The idea
+
+Most personal finance content in Singapore sells you complexity. For an ordinary salaried
+household, nearly all of the value sits in a handful of decisions you make **once**:
+
+| | Decision | In one line |
+|:-:|---|---|
+| 🏦 | **Fund the CPF floor** | Top up MediSave and the Special Account toward the Basic Retirement Sum, and bank the tax relief. |
+| 🌍 | **Own the world through Ireland** | One Ireland-domiciled accumulating ETF (IWDA / EIMI / VWRA) through Interactive Brokers. |
+| 💳 | **One flat cashback card** | Uncapped 1.5–1.7% on everything. No categories, no caps, no tracking. |
+| 🛡️ | **Insure the income, not the savings** | Know what MediShield Life, CareShield Life and DPS already cover before buying more. |
+| 🧾 | **Claim every relief** | CPF top-ups and SRS before 31 December, and which spouse should claim what. |
+| 💸 | **Collect every payout** | Link PayNow, claim the CDC vouchers, and nothing the government sends gets missed. |
+
+When the family grows, the guide covers hiring a helper, every baby benefit, and what
+preschool really costs.
+
+## 📈 The STI dashboard
+
+The Straits Times Index and all 30 of its constituents, with daily prices back to
+December 1987. Market crises, Singapore-specific events, policy changes and every
+earnings result are marked on the chart. Pan, zoom, and compare against the S&P 500,
+Nasdaq, Hang Seng, Nikkei, Bitcoin or gold.
+
+<p align="center"><a href="https://fang89.github.io/sg-personal-finance/#sti"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/sti-chart-dark.png"><img src="docs/screenshots/sti-chart-light.png" alt="STI dashboard: DBS share price over the past year with earnings beats and misses annotated" width="760"></picture></a></p>
+
+## 🧮 Six calculators, built in
+
+Type your own numbers; everything updates as you go. Nothing leaves your browser.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**[CPF top-up planner](https://fang89.github.io/sg-personal-finance/#cpf)**<br><sub>Projects your Special Account against your own cohort's Basic Retirement Sum, and the tax you save on the way.</sub>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/calc-cpf-dark.png"><img src="docs/screenshots/calc-cpf-light.png" alt="CPF top-up planner"></picture>
+
+</td>
+<td width="50%" valign="top">
+
+**[Tax estimator](https://fang89.github.io/sg-personal-finance/#tax)**<br><sub>YA2026 resident rates, CPF top-ups, SRS and reliefs: your bill, marginal and effective rate.</sub>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/calc-tax-dark.png"><img src="docs/screenshots/calc-tax-light.png" alt="Tax estimator"></picture>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**[Payout estimator](https://fang89.github.io/sg-personal-finance/#payouts-estimator)**<br><sub>Cost-of-Living payment, GST Voucher, CDC vouchers, U-Save and Child LifeSG Credits for your household.</sub>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/calc-payouts-dark.png"><img src="docs/screenshots/calc-payouts-light.png" alt="Payout estimator"></picture>
+
+</td>
+<td width="50%" valign="top">
+
+**[Childcare fee calculator](https://fang89.github.io/sg-personal-finance/#childcare-fee-calculator)**<br><sub>Basic and additional subsidies against your centre's fee, and what you actually pay.</sub>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/calc-childcare-dark.png"><img src="docs/screenshots/calc-childcare-light.png" alt="Childcare fee calculator"></picture>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**[Cashback card comparison](https://fang89.github.io/sg-personal-finance/#cards)**<br><sub>Nets each card's cashback against its annual fee at your monthly spend.</sub>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/calc-card-dark.png"><img src="docs/screenshots/calc-card-light.png" alt="Cashback card comparison"></picture>
+
+</td>
+<td width="50%" valign="top">
+
+**[Insurance cover check](https://fang89.github.io/sg-personal-finance/#insurance)**<br><sub>Your life and critical illness cover against the MAS rules of thumb.</sub>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/calc-ins-dark.png"><img src="docs/screenshots/calc-ins-light.png" alt="Insurance cover check"></picture>
+
+</td>
+</tr>
+</table>
+
+## 🗺️ What's inside
+
+<table>
+<tr>
+<td valign="top" width="20%">
+
+**1 · Finance basics**
+
+- [CPF](https://fang89.github.io/sg-personal-finance/#cpf)
+- [ETF investing](https://fang89.github.io/sg-personal-finance/#etf)
+- [Credit card](https://fang89.github.io/sg-personal-finance/#cards)
+- [Insurance](https://fang89.github.io/sg-personal-finance/#insurance)
+- [Tax](https://fang89.github.io/sg-personal-finance/#tax)
+- [Government payouts](https://fang89.github.io/sg-personal-finance/#payouts)
+- [Checklist](https://fang89.github.io/sg-personal-finance/#checklist)
+
+</td>
+<td valign="top" width="20%">
+
+**2 · [STI dashboard](https://fang89.github.io/sg-personal-finance/#sti)**
+
+38 years of the index and its 30 constituents, annotated.
+
+</td>
+<td valign="top" width="20%">
+
+**3 · [Hiring a helper](https://fang89.github.io/sg-personal-finance/#helper)**
+
+Full monthly cost, the $60 concessionary levy, MOM rules and the step-by-step process.
+
+</td>
+<td valign="top" width="20%">
+
+**4 · [Baby bonus](https://fang89.github.io/sg-personal-finance/#baby)**
+
+Baby Bonus, CDA, MediSave grant, parental leave, tax rebates, and the April 2027 switch to the SG Child Support Package.
+
+</td>
+<td valign="top" width="20%">
+
+**5 · [Childcare](https://fang89.github.io/sg-personal-finance/#childcare)**
+
+Preschool fees, subsidies, getting a place, and the 2027–2030 changes.
+
+</td>
+</tr>
+</table>
+
+> [!NOTE]
+> **This is general information, not financial advice.** Figures were checked against
+> primary sources (CPF Board, IRAS, MOM, MOH, Made for Families) and last updated on
+> 4 October 2026.
+
+---
+
+## 🛠️ For contributors
+
+### Structure
 
 ```
-index.html                 the entire guide — no build step, no dependencies
-sti/                       section 08: the STI dashboard's code and data
+index.html                 the entire guide: no build step, no dependencies
+sti/                       the STI dashboard's code and data
   app.js                   chart code; its markup and styles live in index.html under #sti-app
   data.js, earnings.js …   generated data; refresh with the fetch_*.py scripts (see sti/README.md)
   index.html               redirect from the old /sti/ address to ../#sti
 artifact.html              generated preview body (Claude Artifact / embed use)
 tools/build_artifact.py    regenerates artifact.html from index.html
+docs/screenshots/          images used in this README
 .nojekyll                  tells GitHub Pages to serve the files as-is
 ```
 
-`index.html` is the single source of truth for the guide. Its styles, scripts and
-content are inline, so it works from a local `file://` open, any static host, or GitHub
-Pages with no toolchain. The STI dashboard (section 08) loads its ~3 MB of data from `sti/` only when the
-reader scrolls near it.
+`index.html` is the single source of truth. Its styles, scripts and content are inline,
+so it works from a local `file://` open, any static host, or GitHub Pages with no
+toolchain. The STI dashboard loads its ~3 MB of data from `sti/` only when the reader
+opens it.
 
-## Running it locally
+### Running it locally
 
-Open `index.html` in a browser. That is the whole procedure.
-
-If you want a local server (for consistent relative-path behaviour):
-
-```sh
-python3 -m http.server 8000
-# then visit http://localhost:8000
-```
-
-## Publishing to GitHub Pages
+Open `index.html` in a browser. That is the whole procedure. For consistent
+relative-path behaviour, serve it instead:
 
 ```sh
-cd sg-personal-finance
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin git@github.com:<your-username>/<your-repo>.git
-git push -u origin main
+python3 -m http.server 8000   # then visit http://localhost:8000
 ```
 
-Then in the repository: **Settings → Pages → Build and deployment → Source:
-Deploy from a branch**, branch `main`, folder `/ (root)`. The site appears at
-`https://<your-username>.github.io/<your-repo>/` within a couple of minutes.
+### Publishing your own copy
 
-For a custom domain, add a `CNAME` file containing the bare domain and point a
-`CNAME` DNS record at `<your-username>.github.io`.
+Fork the repo, then **Settings → Pages → Build and deployment → Source: Deploy from a
+branch**, branch `main`, folder `/ (root)`. The site appears at
+`https://<your-username>.github.io/<your-repo>/` within a couple of minutes. For a custom
+domain, add a `CNAME` file containing the bare domain and point a `CNAME` DNS record at
+`<your-username>.github.io`.
 
-## Regenerating the artifact preview
+Regenerate the artifact preview with `python3 tools/build_artifact.py`.
 
-```sh
-python3 tools/build_artifact.py
-```
+### Keeping it accurate
 
-## Keeping it accurate
+<details>
+<summary>What changes, when, and where to check it</summary>
 
-The page states a verification date in three places — the masthead stamp, the footer
-disclaimer, and the colophon. Update all three whenever you refresh the figures. Things
-that move, and when:
+<br>
+
+The page states its verification date in the masthead stamp ("Updated …"). Update it,
+and the badge at the top of this README, whenever you refresh the figures. Things that
+move, and when:
 
 | What | Changes | Source |
 |---|---|---|
@@ -111,6 +236,8 @@ Hard-coded numbers live in two places: the HTML tables, and the constants at the
 each calculator in the `<script>` block (`BRS_2026`, `FRS_2026`, `BRS_GROWTH`, `CPF_RATE`,
 the `CARDS` array, `BANDS`, `CPF_WAGE_CAP` and `RELIEF_CAP`). Change both.
 
+</details>
+
 ## Contributing
 
 Corrections are welcome, especially on figures that have moved. Please cite the primary
@@ -118,4 +245,4 @@ source in the pull request.
 
 ## Licence
 
-MIT — see [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).

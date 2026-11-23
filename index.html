@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SG Finance</title>
-<meta name="description" content="SG Finance: a plain Singapore household money guide covering CPF top-ups, Irish-domiciled ETFs through IBKR, one flat cashback card, hiring a domestic helper, government benefits for a new baby, insurance and income tax reliefs.">
+<meta name="description" content="SG Finance: a plain Singapore household money guide covering CPF top-ups, Irish-domiciled ETFs through IBKR or SGX, one flat cashback card, hiring a domestic helper, government benefits for a new baby, insurance and income tax reliefs.">
 <meta name="color-scheme" content="light dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -187,6 +187,7 @@ code { font-family: var(--f-mono); font-size: .86em; background: var(--band); bo
 .body-col > p, .body-col > ul, .body-col > ol { max-width: var(--measure); }
 .body-col h2 { font-size: clamp(26px, 3.4vw, 32px); line-height: 1.2; letter-spacing: -.022em; font-weight: 700; max-width: 30ch; }
 .body-col h3 { font-size: 20px; line-height: 1.35; font-weight: 650; margin-top: 22px; letter-spacing: -.012em; }
+.body-col h4 { font-size: 16px; line-height: 1.4; margin-top: 14px; }
 .lede { font-size: 18px; line-height: 1.65; color: var(--ink-soft); }
 ul.ticks, ol.steps { padding-left: 0; list-style: none; display: grid; gap: 12px; }
 ul.ticks li { padding-left: 22px; position: relative; }
@@ -416,7 +417,7 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
           <button class="dd-btn" type="button" aria-expanded="false"><span class="num">1</span>Finance basics <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           <div class="dd-panel">
             <a href="#cpf" data-sec="cpf"><b>CPF</b><span>Top-ups toward the Basic Retirement Sum, and the tax relief</span></a>
-            <a href="#etf" data-sec="etf"><b>ETF investing</b><span>One Irish-domiciled world fund through IBKR</span></a>
+            <a href="#etf" data-sec="etf"><b>ETF investing</b><span>One Irish-domiciled world fund, on the LSE or now SGX</span></a>
             <a href="#cards" data-sec="cards"><b>Credit card</b><span>One flat cashback card, fee versus rate</span></a>
             <a href="#insurance" data-sec="insurance"><b>Insurance</b><span>Shield plans, term life, insuring the baby</span></a>
             <a href="#tax" data-sec="tax"><b>Tax</b><span>Every relief, SRS, who claims what</span></a>
@@ -481,7 +482,7 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
       for every relief you are owed.
     </p>
     <div class="stamp">
-      <span>Updated <b>4 Oct 2026</b></span>
+      <span>Updated <b>23 Nov 2026</b></span>
       <span>Tax year <b>YA2026</b></span>
       <span>General information, <b>not financial advice</b></span>
     </div>
@@ -500,8 +501,8 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
       <a class="toc-card" href="#etf">
         <span class="n">1.2 · ETF investing</span>
         <span class="h">Buy the world through Ireland</span>
-        <span class="d">IWDA / EIMI / VWRA through Interactive Brokers, why domicile beats index choice, and where Singapore stocks fit.</span>
-        <span class="x">15% vs 30% withholding · no US estate tax</span>
+        <span class="d">IWDA / EIMI / VWRA through Interactive Brokers, the new Irish funds on SGX in SGD (XWR, XUS), why domicile beats index choice, and where Singapore stocks fit.</span>
+        <span class="x">15% vs 30% withholding · no US estate tax · now on SGX</span>
       </a>
       <a class="toc-card" href="#cards">
         <span class="n">1.3 · Credit card</span>
@@ -822,10 +823,11 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
     <div class="section-grid">
       <div class="rail">
         <span class="role">1.2 — ETF investing</span>
-        <span class="rail-note">IBKR plus one or two Irish-domiciled accumulating funds. Set up once.</span>
+        <span class="rail-note">One or two Irish-domiciled accumulating funds, on the LSE through IBKR or, since October 2026, on SGX in SGD. Set up once.</span>
         <nav class="rail-toc" aria-label="In this section">
           <a href="#etf-the-two-reasons-domicile-matters">The two reasons domicile matters</a>
           <a href="#etf-the-funds">The funds</a>
+          <a href="#etf-irish-funds-on-sgx">Irish funds on SGX, in SGD</a>
           <a href="#etf-setting-up-ibkr">Setting up IBKR</a>
           <a href="#etf-singapore-stocks-and-the-sti">Singapore stocks and the STI</a>
         </nav>
@@ -845,6 +847,7 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
             <li>Buy <strong>IWDA</strong> (+ <strong>EIMI</strong> at ~10%), or just <strong>VWRA</strong> for one line — all Irish-domiciled, accumulating.</li>
             <li>Irish domicile halves US dividend withholding (15% vs 30%) and keeps you out of <strong>US estate tax</strong>.</li>
             <li>Use <strong>IBKR Singapore</strong> on Tiered pricing, convert SGD→USD on IDEALPRO, buy the LSE USD line monthly.</li>
+            <li><strong>New since 13 Oct 2026:</strong> Irish funds trade on <strong>SGX in SGD</strong>. <strong>XWR</strong> (MSCI World, 0.12%) and <strong>XUS</strong> (S&amp;P 500, 0.03%) work with any local broker, a CDP account and SRS. Spreads are still settling, so use limit orders.</li>
           </ul>
         </div>
 
@@ -938,6 +941,93 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
           </p>
         </div>
 
+        <h3 id="etf-irish-funds-on-sgx">Irish funds on SGX, in SGD</h3>
+        <p>
+          Until October 2026 the only way to own an Irish-domiciled index fund was a
+          foreign exchange, usually London through IBKR. On <strong>13 October 2026</strong>
+          DWS cross-listed four Xtrackers UCITS ETFs on SGX. They are the same Irish funds
+          that already trade in London and Frankfurt, with the same 15% US dividend
+          withholding and no US estate tax, now quoted in Singapore dollars in lots of one
+          share.
+        </p>
+        <div class="tablewrap panel">
+          <table>
+            <thead>
+              <tr><th>SGX code</th><th>Fund</th><th class="n">TER</th><th>ISIN</th><th>Use it for</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>XWR</strong></td>
+                <td class="wrap-ok">Xtrackers MSCI World UCITS ETF 1C (Acc)</td>
+                <td class="n">0.12%</td>
+                <td>IE00BJ0KDQ92</td>
+                <td class="wrap-ok">The SGX counterpart of IWDA: the same index, about 1,250 developed-market companies, for 8 basis points a year less. Fund size is about US$31bn across all listings.</td>
+              </tr>
+              <tr>
+                <td><strong>XUS</strong></td>
+                <td class="wrap-ok">Xtrackers S&amp;P 500 UCITS ETF 4C (Acc)</td>
+                <td class="n">0.03%</td>
+                <td>IE000Z9SJA06</td>
+                <td class="wrap-ok">The 500 largest US companies. The cheapest line on SGX and the most traded of the four in the first weeks. It covers the US only, so it is a tilt rather than a whole portfolio.</td>
+              </tr>
+              <tr>
+                <td>XND</td>
+                <td class="wrap-ok">Xtrackers Nasdaq 100 UCITS ETF 1C (Acc)</td>
+                <td class="n">0.20%</td>
+                <td>IE00BMFKG444</td>
+                <td class="wrap-ok">A technology-heavy slice of the US market. Not needed in a core holding.</td>
+              </tr>
+              <tr>
+                <td>EUS</td>
+                <td class="wrap-ok">Xtrackers S&amp;P 500 Equal Weight UCITS ETF 1C (Acc)</td>
+                <td class="n">0.15%</td>
+                <td>IE00BLNMYC90</td>
+                <td class="wrap-ok">Each S&amp;P 500 company at the same weight. This is a deliberate bet, not an index default. Day-one spreads were the widest of the four.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4>What changes</h4>
+        <ul class="ticks">
+          <li><strong>No foreign broker, no FX step.</strong> Buy from moomoo, Longbridge, FSMOne, IBKR or a bank brokerage in SGD. The conversion still happens, but inside the market maker's price, not as a separate trade you have to manage.</li>
+          <li><strong>CDP custody, where your broker supports it.</strong> Shares can sit in your own name at the Depository rather than with an overseas custodian. That makes things simpler for your estate.</li>
+          <li><strong>SRS can finally hold a world fund.</strong> SRS money can buy SGX-listed ETFs, and Irish funds on the LSE were never an SRS option. Check that your SRS bank has enabled these counters.</li>
+          <li><strong>Small amounts work.</strong> With one-share lots (about S$200 for XWR, S$20 for XUS) and a percentage commission, a S$300 monthly buy is no longer eaten by a USD minimum fee.</li>
+        </ul>
+
+        <h4>What does not change</h4>
+        <ul class="ticks">
+          <li><strong>SGD pricing is not currency protection.</strong> The fund holds US dollar and other assets and reports its NAV in USD. The SGD price moves with USD/SGD exactly as IWDA's would.</li>
+          <li><strong>Not CPF-investible.</strong> None of the four is on the CPF Investment Scheme list, so use cash or SRS, not your OA.</li>
+          <li><strong>Liquidity is new.</strong> One market maker (Flow Traders) quotes these lines. On the first morning XUS traded at a 0.05% bid–ask gap, but XWR was at 0.73% and EUS at 1.46%. On a long hold, an 8 bp/yr saving can still be undone by a 0.7% spread paid on every buy. Always use a limit order near the indicated NAV, and check the live spread before you commit.</li>
+        </ul>
+
+        <div class="note">
+          <span class="tag">Which line to buy</span>
+          <p>
+            <strong>SRS money, a local broker, or monthly amounts under about S$1,000:</strong>
+            buy <strong>XWR</strong> on SGX. <strong>Already on IBKR and buying in larger
+            blocks:</strong> IWDA or VWRA in London is still the deeper market, and its
+            spread is usually tighter than the SGX line's. Compare the quoted spread with
+            the 0.08%/yr TER gap. Once XWR's spread is routinely under about 0.2%, it is the
+            better buy for almost everyone. Do not sell an existing IWDA holding to switch.
+            They are the same exposure, and the round-trip cost buys you nothing. Point new
+            money at XWR instead. SGX has no emerging-markets UCITS line yet, so EIMI stays
+            on the LSE, or skip it and accept a developed-only portfolio.
+          </p>
+        </div>
+
+        <div class="note warn">
+          <span class="tag">Not the same thing: the iFAST feeders</span>
+          <p>
+            In late October 2026 iFAST also listed four Singapore-domiciled feeder ETFs (XBG
+            AI &amp; Big Data, plus Nikkei 225, MSCI Korea and MSCI Taiwan). Each one invests in
+            an Xtrackers fund, but adds its own layer of fees, with estimated TERs of 0.43–0.77%.
+            They are single-theme or single-country bets with no place in a core holding.
+          </p>
+        </div>
+
         <h3 id="etf-setting-up-ibkr">Setting up IBKR</h3>
         <ol class="steps">
           <li>
@@ -1012,8 +1102,8 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
           You do not need more than that. Your salary, CPF and home are already Singapore
           assets. If you still want a home tilt for the dividends, which Singapore companies
           pay tax-free, buy the whole index through one of the two STI ETFs on SGX,
-          <strong>SPDR STI ETF (ES3)</strong> or <strong>Nikko AM Singapore STI ETF
-          (G3B)</strong>, rather than picking banks. Keep it a small slice next to IWDA, not a
+          <strong>SPDR STI ETF (ES3)</strong> or <strong>Amova (formerly Nikko AM) Singapore STI ETF
+          (G3B)</strong>, rather than picking banks. Keep it a small slice next to IWDA or XWR, not a
           replacement for it.
         </p>
 
@@ -1523,7 +1613,7 @@ thead th { background: var(--accent-tint); color: var(--accent-ink); }
         <ul class="ticks">
           <li><strong>Only half of each withdrawal is taxed</strong>, and you can spread withdrawals over 10 years. Taking out $40,000 a year makes $20,000 taxable, which is inside the 0% band if you have no other income. Done that way, the money is never taxed at all.</li>
           <li><strong>Early withdrawal is expensive.</strong> The whole amount is taxed, plus a 5% penalty, except on death, serious illness or bankruptcy.</li>
-          <li><strong>Invest it.</strong> Left as cash, SRS earns next to nothing. The SRS bank's brokerage can buy SGX-listed ETFs such as the <a href="#etf-singapore-stocks-and-the-sti">STI ETFs</a>, plus unit trusts and Singapore Savings Bonds.</li>
+          <li><strong>Invest it.</strong> Left as cash, SRS earns next to nothing. The SRS bank's brokerage can buy SGX-listed ETFs, including, since October 2026, the Irish world fund <a href="#etf-irish-funds-on-sgx">XWR</a>. It can also buy the <a href="#etf-singapore-stocks-and-the-sti">STI ETFs</a>, unit trusts and Singapore Savings Bonds.</li>
           <li><strong>Worth it from about the 11.5% band.</strong> Below that, the CPF top-up (which also earns 4%) is the better first $8,000. Fund CPF first, then SRS.</li>
         </ul>
 
